@@ -1,3 +1,9 @@
-a = 1
+from flask import Flask
+app = Flask(__name__)
 
-b = 1
+@app.route("/")
+def hello_world():
+    return "hello world"
+
+if __name__ == "__main__":
+    app.run()
